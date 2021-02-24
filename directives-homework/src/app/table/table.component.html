@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <h1 class="title">
+        {{ title }}
+      </h1>
+
+      <div class="controls-wrapper">
+        <button type="button" class="btn btn-primary" (click)="categoryReset()">All Categories</button>
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select category</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button *ngFor="let category of categories" ngbDropdownItem (click)="onCategorySelect(category.value)">
+              {{ category.title }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Product</th>
+          <th scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor='let product of products; index as i'>
+            <tr *ngIf="i < rows && !selectedCategory || selectedCategory === product.category" [style.backgroundColor]="product.price > 500 ? '#dc3545' : undefined">
+              <th scope="row">{{ product.id }}</th>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | number }}</td>
+              <td>
+                <button type="button" class="btn btn-danger" (click)="removeElement(product.id)">Delete</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
