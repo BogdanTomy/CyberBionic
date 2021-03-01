@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Hello Angular</h1>
+  <nav class="menu">
+    <a class="menu-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a class="menu-item" routerLink="/posts" routerLinkActive="active">Posts</a>
+    <a class="menu-item" routerLink="/contacts" routerLinkActive="active">Contacts</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

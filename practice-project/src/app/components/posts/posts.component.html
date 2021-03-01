@@ -1,0 +1,8 @@
+
+<ul>
+  <li *ngFor="let post of posts">
+    <p><b>{{ post.title }}</b></p>
+    <p>{{ post.description }}</p>
+    <button [routerLink]="post.id">More</button>
+  </li>
+</ul>

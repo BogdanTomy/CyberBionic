@@ -1,0 +1,8 @@
+<h2>Item Post</h2>
+
+<div *ngIf="post">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.description }}</p>
+  <hr>
+  <p>Создано: {{ post.created | date }}</p>
+</div>
