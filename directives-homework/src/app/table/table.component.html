@@ -6,6 +6,9 @@
         {{ title }}
       </h1>
 
+      <app-form
+        (addProduct)="addProductHandler($event)"></app-form>
+
       <div class="controls-wrapper">
         <button type="button" class="btn btn-primary" (click)="categoryReset()">All Categories</button>
         <div ngbDropdown class="d-inline-block">

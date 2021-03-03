@@ -50,4 +50,13 @@ export class TableComponent implements OnInit {
     this.selectedCategory = undefined;
   }
 
+  addProductHandler(data): void {
+    data.id = 100;
+    this.products.push(data);
+    console.log(data);
+    setTimeout(() => {
+      console.log(data);
+    }, 1000)
+  }
+
 }
