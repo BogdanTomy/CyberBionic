@@ -1,0 +1,14 @@
+<div>
+    <h2>Registration / Login</h2>
+
+    <form [formGroup]="authForm" >
+        <input type="text" formControlName="login">
+        <br>
+        <br>
+        <input type="text" formControlName="password">
+        <br>
+        <br>
+        <input type="submit" (click)="submitReg(authForm)" value="registration">
+        <input type="submit" (click)="submitLogin(authForm)" value="login in">
+    </form>
+</div>

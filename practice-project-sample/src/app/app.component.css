@@ -1,0 +1,20 @@
+.active{
+    background-color: lightgreen;
+}
+
+nav{
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+}
+
+a{
+    padding: 10px;
+}
+
+
+.container{
+    max-width: 1200px;
+    border: 1px solid blue;
+    margin: 0 auto;
+}

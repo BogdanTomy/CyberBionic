@@ -1,0 +1,13 @@
+<h1>Angular hello</h1>
+
+<nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a [routerLink]="['/posts']" routerLinkActive="active">Posts</a>
+    <a routerLink="contacts" routerLinkActive="active">Contacts</a>
+    <a routerLink="admin" routerLinkActive="active">Login</a>
+    <a routerLink="admin/panel" routerLinkActive="active">Panel</a>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

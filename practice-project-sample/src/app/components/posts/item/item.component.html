@@ -1,0 +1,11 @@
+<h2>Item post</h2>
+
+<div *ngIf="post">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.description }}</p>  
+    <hr>
+    <p>Создано: {{ post.created }}</p>
+</div>
+
+<!-- <img [src]="post.src" alt=""> -->
+<!-- <div [ngStyle]="getImg()"></div> -->
