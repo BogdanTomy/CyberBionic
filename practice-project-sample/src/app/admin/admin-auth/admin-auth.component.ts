@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { AuthService } from './../auth.service'
+import { AuthService } from './../auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,13 +15,13 @@ export class AdminAuthComponent implements OnInit {
     private router: Router
     ) { }
 
-  authForm: FormGroup
+  authForm: FormGroup;
 
   ngOnInit(): void {
     this.authForm = new FormGroup({
       login: new FormControl(),
       password: new FormControl()
-    })
+    });
   }
 
   submitReg(form){
@@ -37,11 +37,12 @@ export class AdminAuthComponent implements OnInit {
     this.auth.loginIn(form.value)
               .subscribe(res => {
                 console.log(res);
-                if(res.user){
-                  this.router.navigate(['admin/panel'])
+                if (res.success) {
+                  localStorage.setItem('token-key', res.user.id);
+                  this.router.navigate(['admin/panel']);
                 }
               })
   }
 
-  
+
 }

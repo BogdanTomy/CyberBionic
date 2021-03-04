@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface LogedIn{
-  user: any
+interface LoggedIn {
+  user: any;
+  success: boolean;
 }
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +18,7 @@ export class AuthService {
   }
 
   loginIn(user){
-    return this.http.post<LogedIn>('http://167.99.203.217/api/user/auth', user)
+    return this.http.post<LoggedIn>('http://167.99.203.217/api/user/auth', user)
   }
 
 }
