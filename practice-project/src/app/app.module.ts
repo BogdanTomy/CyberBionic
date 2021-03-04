@@ -9,6 +9,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ItemComponent } from './components/posts/item/item.component';
+import {AdminRoutingModule} from './admin/admin-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ItemComponent } from './components/posts/item/item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
